@@ -28,5 +28,5 @@ Craft twig filter to expand urls, hashtags, user mentions in tweets. Works with 
 
 - Use as filter `tweet|tweetLink`
 - Use as function `tweetLink(tweet)`
-- filter/function argument newWindow (default false): include `target="_blank"` to open urls in new window?
-- filter/function argument title (default false): include title attribute in url?
+- filter/function argument `newWindow` (default false): include `target="_blank"` to open urls in new window?
+- filter/function argument `title` (default false): include title attribute in url?
