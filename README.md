@@ -2,20 +2,20 @@
 
 Craft twig filter to expand urls, hashtags, user mentions in tweets. Works with [Twitter Plugin](https://dukt.net/craft/twitter)
 
-** Installation**
+## Installation
 
 - Unzip file
 - Place the 'tweetlinker' folder into your craft/plugins directory
 - Install plugin in the Craft Control Panel under Settings > Plugins
 - Install [Twitter Plugin](https://dukt.net/craft/twitter)
 
-** Usage
+## Usage
 
 - Fetch tweet with `craft.twitter.get`
 - `{{tweet|tweetLink}}` is the tweet with urls etc. expanded
 - `{{...|raw}}` so the link html is not escaped
 
-*** Example
+### Example
 
 ```
 {% set tweets = craft.twitter.get('statuses/user_timeline.json?screen_name=marionnewlevant&count=5') %}
@@ -24,7 +24,7 @@ Craft twig filter to expand urls, hashtags, user mentions in tweets. Works with 
 {% endfor %}
 ```
 
-** Features
+## Features
 
 - Use as filter `tweet|tweetLink`
 - Use as function `tweetLink(tweet)`
