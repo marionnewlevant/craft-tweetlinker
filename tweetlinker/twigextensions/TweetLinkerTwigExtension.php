@@ -88,7 +88,7 @@ class TweetLinkerTwigExtension extends \Twig_Extension
   */
   private function _sortEntities($entities)
   {
-    $res = [];
+    $res = array();
     foreach($entities as $entityType => $entityGroup)
     {
       foreach($entityGroup as $single)
