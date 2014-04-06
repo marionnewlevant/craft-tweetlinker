@@ -32,7 +32,7 @@ class TweetLinkerPlugin extends BasePlugin
         return 'http://marion.newlevant.com';
     }
 
-    function hookAddTwigExtension()
+    function addTwigExtension()
     {
         Craft::import('plugins.tweetlinker.twigextensions.TweetLinkerTwigExtension');
         return new TweetLinkerTwigExtension();
