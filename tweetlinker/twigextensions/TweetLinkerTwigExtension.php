@@ -57,7 +57,7 @@ class TweetLinkerTwigExtension extends \Twig_Extension
       $start = $entity['indices'][1];
     }
     $expandedTweet .= substr($originalTweet, $start);
-    return($expandedTweet);
+    return TemplateHelper::getRaw($expandedTweet);
   }
 
   /* raw tweet entities look like:
