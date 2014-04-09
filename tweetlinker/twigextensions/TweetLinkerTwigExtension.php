@@ -34,7 +34,7 @@ class TweetLinkerTwigExtension extends \Twig_Extension
     $sortedEntities = $this->_sortEntities($tweet['entities']);
     foreach($sortedEntities as $entity)
     {
-      $expandedTweet .= substr($originalTweet, $start, $entity['indices'][0] - $start);
+      $expandedTweet .= mb_substr($originalTweet, $start, $entity['indices'][0] - $start);
       switch ($entity['entityType'])
       {
         case 'hashtags':
@@ -51,12 +51,12 @@ class TweetLinkerTwigExtension extends \Twig_Extension
           $expandedTweet .= $this->_url($entity, $newWindow, $title);
           break;
         default:
-          $expandedTweet .= substr($originalTweet, $entity['indices'][0], $entity['indices'][1]-$entity['indices'][0]);
+          $expandedTweet .= mb_substr($originalTweet, $entity['indices'][0], $entity['indices'][1]-$entity['indices'][0]);
           break;
       }
       $start = $entity['indices'][1];
     }
-    $expandedTweet .= substr($originalTweet, $start);
+    $expandedTweet .= mb_substr($originalTweet, $start);
     return($expandedTweet);
   }
 
