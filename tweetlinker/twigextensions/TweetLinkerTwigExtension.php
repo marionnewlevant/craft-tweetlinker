@@ -113,8 +113,8 @@ class TweetLinkerTwigExtension extends \Twig_Extension
   private function _userMention($linkData, $newWindow, $title)
   {
     $target = $newWindow ? ' target="_blank"' : '';
-    $title = $title ? ' title="'.$linkData['screen_name'].'"' : '';
-    return '<a href="http://twitter.com/'.$linkData['name'].'"'.$target.$title.'>@<span>'.$linkData['screen_name'].'</span></a>';
+    $title = $title ? ' title="'.$linkData['name'].'"' : '';
+    return '<a href="http://twitter.com/'.$linkData['screen_name'].'"'.$target.$title.'>@<span>'.$linkData['screen_name'].'</span></a>';
   }
 
   private function _hashtag($linkData, $hash, $newWindow, $title)
