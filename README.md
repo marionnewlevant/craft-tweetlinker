@@ -1,3 +1,7 @@
+# NOTE: This functionality is now a part of [Twitter Plugin](https://dukt.net/craft/twitter) since version 0.9.10
+
+Still, there are differences, and you might like this one better.
+
 # Craft Twig filter: expand links in tweets
 
 Craft twig filter to expand urls, hashtags, user mentions in tweets. Works with [Twitter Plugin](https://dukt.net/craft/twitter)
